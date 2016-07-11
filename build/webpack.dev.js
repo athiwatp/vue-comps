@@ -19,7 +19,8 @@ module.exports = {
   module: {
     loaders: [
         {test: /\.vue$/, loader: 'vue' },
-        {test: /\.less$/, loader: ExtractTextPlugin.extract( "style-loader", 'css-loader!autoprefixer-loader!less-loader')},
+        {test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader')},
+        {test: /\.less$/, loader: ExtractTextPlugin.extract( "style-loader", 'css-loader?sourceMap!autoprefixer-loader!less-loader')},
         {test: /\.js$/, loader: 'babel', exclude: /node_modules/ },
         {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=8192&mimetype=image/svg+xml'},
         {test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=8192&mimetype=application/font-woff2'},
