@@ -1,7 +1,8 @@
 var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
-var vue = require('vue-loader')
+var CopyWebpackPlugin = require('copy-webpack-plugin');
+var vue = require('vue-loader');
 
 module.exports = {
   // the main entry of our app
@@ -35,8 +36,10 @@ module.exports = {
   },
   plugins: [
       new ExtractTextPlugin("style.css", {
-          allChunks: true,
-          disable: false
-      })
+          allChunks: true
+      }),
+      new CopyWebpackPlugin([
+          {from: './preview/index.html', to: './index.html'},
+      ])
   ]
 }
