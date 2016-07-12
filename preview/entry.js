@@ -5,8 +5,9 @@ import VueResource from 'vue-resource'
 import VueComps from '../components'
 import Dpr from './utils/dpr'
 
-import appModule from './views/app.vue'
 import './assets/index.less';
+import appModule from './views/app.vue'
+import alertModule from './views/alert.vue'
 
 Vue.use(VueResource)
 Vue.use(VueRouter)
@@ -20,6 +21,9 @@ var router = new VueRouter()
 router.map({
     '/app': {
         component: appModule
+    },
+    '/alert': {
+        component: alertModule
     }
 })
 

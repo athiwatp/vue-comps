@@ -1,0 +1,71 @@
+//Buttons
+.button {
+    border: 1px solid @default-color;
+    color: @default-color;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    border-radius: 5px;
+    line-height: 37px;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    background: none;
+    padding: 0 10px;
+    margin: 0;
+    height: 40px;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    font-size: 14px;
+    font-family: inherit;
+    cursor: pointer;
+    outline: 0;
+    input[type="submit"]&, input[type="button"]&{
+        width: 100%;
+    }
+    &.button-round {
+        font-size: 17px;
+        height: 44px;
+        line-height: 42px;
+        border-radius: 27px;
+    }
+    &.active {
+        background: @default-color;
+        color: #fff;
+    }
+    &.button-big {
+        font-size: 17px;
+        height: 44px;
+        line-height: 42px;
+    }
+    &.button-fill {
+        color:#fff;
+        background: @default-color;
+        border: none;
+    }
+    i.icon {
+        &:first-child {
+            margin-right: 10px;
+        }
+        &:last-child {
+            margin-left: 10px;
+        }
+        &:first-child:last-child {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+    &.primary{
+        background: @button-primary-color;
+    }
+    &.positive{
+        background: @button-positive-color;
+    }
+    &.negative{
+        background: @button-negative-color;
+    }
+}
