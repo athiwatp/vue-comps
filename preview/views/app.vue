@@ -5,11 +5,11 @@
             <li>
                 <div class="item-content">
                     <div class="item-media">
-                        <i class="icon"></i>
+                        <i class="icon icon-alert"></i>
                     </div>
                     <div class="item-inner">
                         <div class="item-title">
-                           components 1
+                            Alert
                         </div>
                     </div>
                 </div>
@@ -17,11 +17,11 @@
              <li>
                 <div class="item-content">
                     <div class="item-media">
-                        <i class="icon"></i>
+                        <i class="icon icon-confirm"></i>
                     </div>
                     <div class="item-inner">
                         <div class="item-title">
-                           components 2
+                            Confirm
                         </div>
                     </div>
                 </div>
@@ -29,11 +29,11 @@
              <li>
                 <div class="item-content">
                     <div class="item-media">
-                        <i class="icon"></i>
+                        <i class="icon icon-message"></i>
                     </div>
                     <div class="item-inner">
                         <div class="item-title">
-                           components 3
+                            Toast
                         </div>
                     </div>
                 </div>
@@ -41,11 +41,11 @@
              <li>
                 <div class="item-content">
                     <div class="item-media">
-                        <i class="icon"></i>
+                        <i class="icon icon-panel"></i>
                     </div>
                     <div class="item-inner">
                         <div class="item-title">
-                           components 4
+                           Panel
                         </div>
                     </div>
                 </div>
