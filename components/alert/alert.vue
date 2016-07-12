@@ -1,10 +1,5 @@
 <template>
-	<div :class="{
-    'modal': true,
-    'modal-in': show,
-    'modal-out': out
-  	}" 
-  	style="margin-top: -64px;">
+	<div class="modal" style="margin-top: -64px;" v-if="show" transition="modal">
 		<div class="modal-inner">
 			<div class="modal-title">提示</div>
 			<div class="modal-text">{{txt}}</div>
@@ -17,8 +12,20 @@
 </template>
 
 <style type="less">
-    .modal {
-        display: none;
+    .modal{
+        transition-property: transform, opacity;
+        transform: translate3d(0,0,0) scale(1.185);
+    }
+    .modal-transition{
+        opacity: 1;
+        transition-duration: 400ms;
+        transform: translate3d(0,0,0) scale(1);
+    }
+    .modal-enter, .modal-leave{
+        opacity: 0;
+        z-index: 13500-1;
+        transition-duration: 400ms;
+        transform: translate3d(0,0,0) scale(0.85);
     }
 </style>
 

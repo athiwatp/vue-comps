@@ -14,17 +14,27 @@
         <div class="content">
             <div class="content-block-title">alert component</div>
             <div class="content-block">
-                <a href="javascript:;" class="button">show alert</a>
+                <a href="javascript:;" class="button" v-on:click="open()">show alert</a>
                 <p>若以当前这种vue的component方法来使用alert弹出框，无法适应需要连续弹出多个的场景。</p>
             </div>
         </div>
+        <alert :show.sync='showAlert' txt='hello vue compos!'></alert>
     </div>
 </template>
 
-<style type="less">
-   
-</style>
+<style type="less"></style>
 
 <script>
-    export default {}
+    export default {
+        data(){
+            return {
+                showAlert: false
+            }
+        },
+        methods: {
+            open(){
+                this.showAlert = true;
+            }
+        }
+    }
 </script>
