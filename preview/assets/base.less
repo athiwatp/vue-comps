@@ -3,6 +3,8 @@ html, body{
 	height: 100%;
 	width: 100%;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
 }
 *{
     padding: 0;
@@ -30,6 +32,9 @@ a{
     padding: 0 15px;
     color: #6d6d72;
     box-sizing: border-box;
+    p{
+        padding: 1em 0;
+    }
 }
 .content-block-title{
     position: relative;
@@ -42,6 +47,9 @@ a{
     line-height: 1;
     color: #6d6d72;
     margin: 35px 15px 10px;
+    &+.content-block{
+        margin-top: 10px;
+    }
 }
 
 .bar-nav~.content{

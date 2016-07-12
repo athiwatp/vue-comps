@@ -35,7 +35,7 @@
         font-weight: normal;
         color: #EE6E03;
     }
-    .content-block-title{
+    .content-block-title.center{
         margin-top: 15px;
         text-transform: lowercase;
         color: #6d6d72;
