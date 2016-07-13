@@ -8,6 +8,7 @@ import Dpr from './utils/dpr'
 import './assets/index.less';
 import appModule from './views/app.vue'
 import alertModule from './views/alert.vue'
+import confirmModule from './views/confirm.vue'
 
 Vue.use(VueResource)
 Vue.use(VueRouter)
@@ -24,6 +25,9 @@ router.map({
     },
     '/alert': {
         component: alertModule
+    },
+    '/confirm': {
+        component: confirmModule
     }
 })
 

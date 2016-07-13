@@ -5,6 +5,7 @@
 			<div class="modal-text">{{txt}}</div>
 		</div>
 		<div class="modal-buttons">
+            <span class="modal-button modal-button-bold" v-on:click="close()">Cancel</span>
 			<span class="modal-button modal-button-bold" v-on:click="close()">OK</span>
 		</div>
 	</div>

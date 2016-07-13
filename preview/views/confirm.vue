@@ -6,19 +6,19 @@
                     <i class="icon icon-back"></i>
                 </a>
             </div>
-            <h1 class="title" >Alert</h1>
+            <h1 class="title" >Confirm</h1>
             <slot name="right">
                 <div class="nav-right nav-button"></div>
             </slot>
         </header>
         <div class="content">
-            <div class="content-block-title">alert component</div>
+            <div class="content-block-title">confirm component</div>
             <div class="content-block">
-                <a class="button" href="javascript:;" v-on:click="open()">show alert</a>
+                <a class="button" href="javascript:;" v-on:click="open()">show confirm</a>
                 <p>若以当前这种vue的component方法来使用alert弹出框，无法适应需要连续弹出多个的场景。</p>
             </div>
         </div>
-        <alert :show.sync='showAlert' txt='hello vue comps!'></alert>
+        <confirm :show.sync='showAlert' txt='Monkey King Lei, Are you OK?'></confirm>
     </div>
 </template>
 

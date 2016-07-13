@@ -52,7 +52,8 @@
                     link: '/alert'
                 },{
                     name: 'Confirm',
-                    icon: 'icon-confirm'
+                    icon: 'icon-confirm',
+                    link: '/confirm'
                 },{
                     name: 'Prompt',
                     icon: 'icon-prompt'
