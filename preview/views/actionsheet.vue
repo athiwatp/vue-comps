@@ -34,12 +34,12 @@
                 show: false,
                 buttons: [{
                     txt: '打开相机',
-                    fn(){
+                    action(){
                         console.log('打开相机');
                     }
                 },{
                     txt: '打开相册',
-                    fn(){
+                    action(){
                         console.log('打开相册');
                     }
                 }]
@@ -48,9 +48,6 @@
         methods: {
             open(){
                 this.show = true;
-            },
-            close(){
-                this.show = false;
             }
         }
     }

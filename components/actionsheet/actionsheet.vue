@@ -4,13 +4,13 @@
             <div class="actions-modal-label" v-if="title">
                 {{title}}
             </div>
-            <div v-for="button in buttons" class="actions-modal-button" v-on:click="button.fn">{{button.txt}}</div>
+            <div v-for="button in buttons" class="actions-modal-button" @click="close(button.action)">{{button.txt}}</div>
         </div>
         <div class="actions-modal-group">
-            <div class="actions-modal-button actions-modal-button-bold" v-on:click="close()">{{cancelTxt || 'Cancel'}}</div>
+            <div class="actions-modal-button actions-modal-button-bold" @click="show=false">{{cancelTxt || 'Cancel'}}</div>
         </div>
     </div>
-    <div v-if="show" class="modal-overlay" transition="opacity" v-on:click="close()"></div>
+    <div v-if="show" class="modal-overlay" transition="opacity" @click="show=false"></div>
 </template>
 
 <style type="less">
@@ -46,7 +46,10 @@
             cancelTxt: String
         },
         methods: {
-            close(){
+            close(action){
+                if (action && typeof(action) === 'function') {
+                    action();
+                }
                 this.show = false;
             }
         }
