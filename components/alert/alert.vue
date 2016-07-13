@@ -59,10 +59,6 @@ export default {
   methods: {
   	close(){
   		this.show = false;
-  		this.out = true;
-  		setTimeout(()=>{
-  			this.out = false;
-  		}, 1000);
   	}
   }
 }

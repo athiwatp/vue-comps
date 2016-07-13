@@ -9,6 +9,7 @@ import './assets/index.less';
 import appModule from './views/app.vue'
 import alertModule from './views/alert.vue'
 import confirmModule from './views/confirm.vue'
+import actionSheetModule from './views/actionsheet.vue'
 
 Vue.use(VueResource)
 Vue.use(VueRouter)
@@ -28,6 +29,9 @@ router.map({
     },
     '/confirm': {
         component: confirmModule
+    },
+    '/actionsheet': {
+        component: actionSheetModule
     }
 })
 

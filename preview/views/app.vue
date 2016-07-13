@@ -59,7 +59,8 @@
                     icon: 'icon-prompt'
                 },{
                     name: 'Action Sheet',
-                    icon: 'icon-actionsheet'
+                    icon: 'icon-actionsheet',
+                    link: '/actionsheet'
                 },{
                     name: 'Toast',
                     icon: 'icon-message'
