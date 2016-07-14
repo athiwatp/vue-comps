@@ -62,6 +62,10 @@
                     icon: 'icon-actionsheet',
                     link: '/actionsheet'
                 },{
+                    name: 'Preloader',
+                    icon: 'icon-loading',
+                    link: '/preloader'
+                },{
                     name: 'Toast',
                     icon: 'icon-message'
                 },{
@@ -73,9 +77,6 @@
                 },{
                     name: 'Pull Down',
                     icon: 'icon-pulldown'
-                },{
-                    name: 'Loading',
-                    icon: 'icon-loading'
                 },{
                     name: 'Date',
                     icon: 'icon-date'

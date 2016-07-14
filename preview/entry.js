@@ -10,6 +10,7 @@ import appModule from './views/app.vue'
 import alertModule from './views/alert.view.vue'
 import confirmModule from './views/confirm.view.vue'
 import actionSheetModule from './views/actionsheet.view.vue'
+import preloaderModule from './views/preloader.view.vue'
 
 Vue.use(VueResource)
 Vue.use(VueRouter)
@@ -32,6 +33,9 @@ router.map({
     },
     '/actionsheet': {
         component: actionSheetModule
+    },
+    '/preloader': {
+        component: preloaderModule
     }
 })
 
