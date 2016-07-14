@@ -67,7 +67,11 @@
                     link: '/preloader'
                 },{
                     name: 'Toast',
-                    icon: 'icon-message'
+                    icon: 'icon-message',
+                    link: '/toast'
+                },{
+                    name: 'Notify',
+                    icon: 'icon-notify'
                 },{
                     name: 'Panel',
                     icon: 'icon-panel'
@@ -83,9 +87,6 @@
                 },{
                     name: 'Slider',
                     icon: 'icon-slider'
-                },{
-                    name: 'Notify',
-                    icon: 'icon-notify'
                 },{
                     name: 'Grid',
                     icon: 'icon-grid'

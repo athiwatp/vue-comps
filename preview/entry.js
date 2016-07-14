@@ -11,6 +11,7 @@ import alertModule from './views/alert.view.vue'
 import confirmModule from './views/confirm.view.vue'
 import actionSheetModule from './views/actionsheet.view.vue'
 import preloaderModule from './views/preloader.view.vue'
+import toastModule from './views/toast.view.vue'
 
 Vue.use(VueResource)
 Vue.use(VueRouter)
@@ -36,6 +37,9 @@ router.map({
     },
     '/preloader': {
         component: preloaderModule
+    },
+    '/toast': {
+        component: toastModule
     }
 })
 
