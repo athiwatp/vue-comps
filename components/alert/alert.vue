@@ -1,11 +1,11 @@
 <template>
 	<div class="modal" style="margin-top: -64px;" v-if="show" transition="modal">
 		<div class="modal-inner">
-			<div class="modal-title">提示</div>
+			<div class="modal-title">{{title}}</div>
 			<div class="modal-text">{{txt}}</div>
 		</div>
 		<div class="modal-buttons">
-			<span class="modal-button modal-button-bold" v-on:click="close()">OK</span>
+			<span class="modal-button modal-button-bold" @click="close(button.action)">{{button.txt}}</span>
 		</div>
 	</div>
 	<div v-show="show" class="modal-overlay" transition="opacity"></div>
@@ -48,16 +48,30 @@ export default {
       default: false,
       twoWay: true
     },
-    out: {
-      type: Boolean,
-      default: false
-    },
     txt: {
-      type: String
+      type: String,
+      required: true
+    },
+    button: {
+        type: Object,
+        default() {
+            return {
+                action: null,
+                txt: 'OK'
+            }
+        },
+        twoWay: true
+    },
+    title: {
+        type: String,
+        default: '提示'
     }
   },
   methods: {
-  	close(){
+  	close(action){
+        if (action && typeof(action) === 'function') {
+            action();
+        }
   		this.show = false;
   	}
   }
