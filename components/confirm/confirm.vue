@@ -13,45 +13,21 @@
 </template>
 
 <style type="less">
-    .modal-overlay{
-       opacity: 0;
-    }
-    .opacity-transition{
-        opacity: 1;
-    }
-    .opacity-enter, .opacity-leave{
-        opacity: 0;
-    }
-    .modal{
-        opacity: 0;
-        transition-property: transform, opacity;
-        transform: translate3d(0,0,0) scale(1.185);
-    }
-    .modal-transition{
-        opacity: 1;
-        transition-duration: 400ms;
-        transform: translate3d(0,0,0) scale(1);
-    }
-    .modal-enter, .modal-leave{
-        opacity: 0;
-        z-index: 13500-1;
-        transition-duration: 400ms;
-        transform: translate3d(0,0,0) scale(0.85);
-    }
+    
 </style>
 
 <script>
 export default {
   props: {
   	show: {
-      type: Boolean,
-      required: true,
-      default: false,
-      twoWay: true
+        type: Boolean,
+        required: true,
+        default: false,
+        twoWay: true
     },
     txt: {
-      type: String,
-      required: true
+        type: String,
+        required: true
     },
     title: {
         type: String,
