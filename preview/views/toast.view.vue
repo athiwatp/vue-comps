@@ -49,7 +49,7 @@
                     default: false,
                     icon: false,
                     postion: false
-                },
+                }
             }
         },
         methods: {

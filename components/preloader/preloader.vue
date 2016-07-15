@@ -1,7 +1,8 @@
 <template>
     <div class="preloader-indicator-overlay" v-if="show"></div>
     <div class="preloader-indicator-modal" v-if="show">
-        <span class="preloader preloader-white"></span>
+        <i class="preloader preloader-white"></i>
+        <span v-if="text">{{text}}</span>
     </div>
 </template>
 
@@ -17,7 +18,8 @@
                 default: false,
                 required: true,
                 twoWay: true
-            }
+            },
+            text: String
         }
     }
 </script>

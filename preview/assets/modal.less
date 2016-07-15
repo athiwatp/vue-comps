@@ -499,19 +499,27 @@ html.with-statusbar-overlay {
     background: none;
 }
 .preloader-indicator-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: absolute;
     left: 50%;
     top: 50%;
     padding: 8px;
     margin-left: -25px;
     margin-top: -25px;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.7);
     z-index: 13500;
     border-radius: 5px;
+    color: #fff;
+    text-align: center;
     .preloader {
         display: block;
         width: 34px;
         height: 34px;
+        &~span{
+            padding: 8px 4px 0 4px;
+        }
     }
 }
 

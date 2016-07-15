@@ -14,10 +14,15 @@
         <div class="content">
             <div class="content-block-title">preloader component</div>
             <div class="content-block">
-                <a class="button" href="javascript:;" v-on:click="open()">show preloader</a>
+                <a class="button" href="javascript:;" v-on:click="open('default')">show default preloader</a>
+            </div>
+            <div class="content-block-title">preloader width text</div>
+            <div class="content-block">
+                <a class="button" href="javascript:;" v-on:click="open('text')">show text preloader</a>
             </div>
         </div>
-        <preloader :show.sync="show"></preloader>
+        <preloader :show.sync="show.default"></preloader>
+        <preloader :show.sync="show.text" text="加载中.."></preloader>
     </div>
 </template>
 
@@ -27,15 +32,18 @@
     export default {
         data(){
             return {
-                show: false,
+                show: {
+                    default: false,
+                    text: false
+                }
             }
         },
         methods: {
-            open(){
-                this.show = true;
+            open(type){
+                this.show[type] = true;
                 setTimeout(()=>{
-                    this.show = false;
-                }, 3000);
+                    this.show[type] = false;
+                }, 2000);
             }
         }
     }
