@@ -56,7 +56,8 @@
                     link: '/confirm'
                 },{
                     name: 'Prompt',
-                    icon: 'icon-prompt'
+                    icon: 'icon-prompt',
+                    link: '/prompt'
                 },{
                     name: 'Action Sheet',
                     icon: 'icon-actionsheet',
@@ -71,7 +72,8 @@
                     link: '/toast'
                 },{
                     name: 'Notify',
-                    icon: 'icon-notify'
+                    icon: 'icon-notify',
+                    link: '/notify'
                 },{
                     name: 'Panel',
                     icon: 'icon-panel'

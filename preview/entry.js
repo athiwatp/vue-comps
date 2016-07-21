@@ -9,9 +9,11 @@ import './assets/index.less';
 import appModule from './views/app.vue'
 import alertModule from './views/alert.view.vue'
 import confirmModule from './views/confirm.view.vue'
+import promptModule from './views/prompt.view.vue'
 import actionSheetModule from './views/actionsheet.view.vue'
 import preloaderModule from './views/preloader.view.vue'
 import toastModule from './views/toast.view.vue'
+import notifyModule from './views/notify.view.vue'
 
 Vue.use(VueResource)
 Vue.use(VueRouter)
@@ -31,6 +33,12 @@ router.map({
     },
     '/confirm': {
         component: confirmModule
+    },
+    '/prompt': {
+        component: promptModule
+    },
+    '/notify': {
+        component: notifyModule
     },
     '/actionsheet': {
         component: actionSheetModule

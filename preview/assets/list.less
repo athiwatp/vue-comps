@@ -115,6 +115,10 @@
         background-position: 95% center;
         background-position: e("-webkit-calc(100% - 15px)") center;
         background-position: e("calc(100% - 15px)") center;
+        &.no-arrow{
+            padding-right: 15px;
+            background-image: none;
+        }
         .hairline(bottom, @listBlockBorderColor);
         .item-title {
             .flex-shrink(1);
@@ -145,6 +149,16 @@
             -webkit-box-orient: vertical;
             display: -webkit-box;
         }
+    }
+    .item-after {
+        white-space: nowrap;
+        color: #8e8e93;
+        -webkit-flex-shrink: 0;
+        -ms-flex: 0 0 auto;
+        flex-shrink: 0;
+        margin-left: 5px;
+        display: flex;
+        max-height: 28px;
     }
   }
   .hairline(top, @listBlockBorderColor);
