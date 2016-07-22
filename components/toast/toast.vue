@@ -6,7 +6,7 @@
     </div>
 </template>
 
-<style type="less">
+<style lang="less">
 
 </style>
 

@@ -12,9 +12,7 @@
 	<div v-show="show" class="modal-overlay" transition="opacity"></div>
 </template>
 
-<style type="less">
-    
-</style>
+<style lang="less"></style>
 
 <script>
 export default {

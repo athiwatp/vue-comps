@@ -22,7 +22,7 @@
     </div>
 </template>
 
-<style type="less">
+<style lang="less">
     .logo{
         width: 100%;
         height: 160px;
@@ -75,6 +75,10 @@
                     icon: 'icon-notify',
                     link: '/notify'
                 },{
+                    name: 'Grid',
+                    icon: 'icon-grid',
+                    link: '/grid'
+                },{
                     name: 'Panel',
                     icon: 'icon-panel'
                 },{
@@ -89,9 +93,6 @@
                 },{
                     name: 'Slider',
                     icon: 'icon-slider'
-                },{
-                    name: 'Grid',
-                    icon: 'icon-grid'
                 }]
             }
         }

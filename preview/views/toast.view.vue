@@ -39,7 +39,7 @@
     </div>
 </template>
 
-<style type="less"></style>
+<style lang="less"></style>
 
 <script>
     export default {

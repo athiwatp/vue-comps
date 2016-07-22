@@ -13,7 +13,7 @@
     <div v-if="show" class="modal-overlay" transition="opacity" @click="show=false"></div>
 </template>
 
-<style type="less">
+<style lang="less">
     .actions-modal{
         transition-property: transform;
         transform: translate3d(0, 100%, 0);

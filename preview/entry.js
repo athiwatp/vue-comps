@@ -14,6 +14,7 @@ import actionSheetModule from './views/actionsheet.view.vue'
 import preloaderModule from './views/preloader.view.vue'
 import toastModule from './views/toast.view.vue'
 import notifyModule from './views/notify.view.vue'
+import gridModule from './views/grid.view.vue'
 
 Vue.use(VueResource)
 Vue.use(VueRouter)
@@ -48,6 +49,9 @@ router.map({
     },
     '/toast': {
         component: toastModule
+    },
+    '/grid': {
+        component: gridModule
     }
 })
 

@@ -11,7 +11,7 @@
 	<div v-show="show" class="modal-overlay" transition="opacity"></div>
 </template>
 
-<style type="less">
+<style lang="less">
     .modal-overlay{
        opacity: 0;
     }

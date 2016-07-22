@@ -18,7 +18,7 @@
     </div>
 </template>
 
-<style type="less">
+<style lang="less">
     .notifications{
         transition-property: transform;
         transform: translate3d(0, -100%, 0);

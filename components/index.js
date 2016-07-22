@@ -5,6 +5,9 @@ import actionSheet from './actionsheet/actionsheet.vue'
 import preloader from './preloader/preloader.vue'
 import toast from './toast/toast.vue'
 import notify from './notify/notify.vue'
+import grid from './grid/grid.vue'
+import item from './grid/grid.item.vue'
+
 
 export default {
     install(Vue){
@@ -15,5 +18,7 @@ export default {
         Vue.component('preloader', preloader);
         Vue.component('toast', toast);
         Vue.component('notify', notify);
+        Vue.component('grid', grid);
+        Vue.component('item', item);
     }
 }
