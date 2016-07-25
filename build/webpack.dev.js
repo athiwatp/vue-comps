@@ -2,7 +2,6 @@ var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var CopyWebpackPlugin = require('copy-webpack-plugin');
-var vue = require('vue-loader');
 
 module.exports = {
   // the main entry of our app
@@ -42,6 +41,7 @@ module.exports = {
       new ExtractTextPlugin("style.css", {
           allChunks: true
       }),
+      new webpack.optimize.OccurrenceOrderPlugin(),
       new CopyWebpackPlugin([
           {from: './preview/index.html', to: './index.html'},
       ])

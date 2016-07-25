@@ -2,9 +2,14 @@
   "name": "vue-components",
   "version": "0.0.1",
   "description": "In development",
-  "main": "index.js",
+  "main": "dist/vue-comps.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "dev": "webpack-dev-server --config build/webpack.dev.js --inline --hot"
+    "dev": "webpack-dev-server --config build/webpack.dev.js --inline --hot",
+    "build": "NODE_ENV=production webpack -p --config build/webpack.build.js --color",
+    "prepublish": "npm run build && mv dist/index/* dist/vue-comps.js && rm -rf dist/index"
   },
   "repository": {
     "type": "git",
@@ -23,7 +28,7 @@
     "babel-loader": "^6.2.1",
     "babel-plugin-transform-runtime": "^6.1.2",
     "babel-preset-es2015": "^6.1.2",
-    "babel-runtime": "^5.8.0",
+    "babel-runtime": "^6.0.0",
     "copy-webpack-plugin": "^3.0.1",
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^1.0.1",
@@ -32,8 +37,8 @@
     "less-loader": "^2.2.3",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "vue-hot-reload-api": "^1.2.1",
-    "vue-html-loader": "^1.0.0",
+    "vue-hot-reload-api": "^1.3.3",
+    "vue-html-loader": "^1.2.3",
     "vue-loader": "^8.0.2",
     "vue-style-loader": "^1.0.0",
     "webpack": "^1.12.3",

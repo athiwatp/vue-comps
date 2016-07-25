@@ -8,7 +8,6 @@ import notify from './notify/notify.vue'
 import grid from './grid/grid.vue'
 import item from './grid/grid.item.vue'
 
-
 export default {
     install(Vue){
         Vue.component('alert', alert);
