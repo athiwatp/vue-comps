@@ -1,7 +1,7 @@
 {
-  "name": "vue-components",
-  "version": "0.0.1",
-  "description": "In development",
+  "name": "vue-comps",
+  "version": "0.1.0",
+  "description": "Mobile UI elements for vue.js",
   "main": "dist/vue-comps.js",
   "files": [
     "dist"
@@ -9,19 +9,26 @@
   "scripts": {
     "dev": "webpack-dev-server --config build/webpack.dev.js --inline --hot",
     "build": "NODE_ENV=production webpack -p --config build/webpack.build.js --color",
-    "prepublish": "npm run build && mv dist/index/* dist/vue-comps.js && rm -rf dist/index"
+    "prepublish": "npm run build && mv dist/index/* dist/vue-comps.js && rm -rf dist/index",
+    "preview": "NODE_ENV=production webpack -p --config build/webpack.dev.js --color"    
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Alex-fun/vue-components.git"
+    "url": "git+https://github.com/Alex-fun/vue-comps.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "component",
+    "vue",
+    "webapp",
+    "webpack",
+    "workplusFE"
+  ],
+  "author": "Hejx",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Alex-fun/vue-components/issues"
+    "url": "https://github.com/Alex-fun/vue-comps/issues"
   },
-  "homepage": "https://github.com/Alex-fun/vue-components#readme",
+  "homepage": "https://github.com/Alex-fun/vue-comps#readme",
   "devDependencies": {
     "autoprefixer-loader": "^3.2.0",
     "babel-core": "^6.0.0",
@@ -42,11 +49,10 @@
     "vue-loader": "^8.0.2",
     "vue-style-loader": "^1.0.0",
     "webpack": "^1.12.3",
-    "webpack-dev-server": "^1.12.1"
-  },
-  "dependencies": {
+    "webpack-dev-server": "^1.12.1",
     "vue": "^1.0.7",
     "vue-resource": "^0.1.17",
     "vue-router": "^0.7.5"
-  }
+  },
+  "dependencies": {}
 }
