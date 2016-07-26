@@ -1,7 +1,10 @@
 var path = require('path');
 var webpack = require('webpack');
+
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var CopyWebpackPlugin = require('copy-webpack-plugin');
+
+var Loaders = require('./webpack.loaders.js');
 
 module.exports = {
   // the main entry of our app
@@ -10,26 +13,25 @@ module.exports = {
   },
   // output configuration
   output: {
-    path: __dirname + '/dist/',
-    contentBase: 'dist/',
+    path: path.resolve(__dirname, '../www'),
+    contentBase: 'www/',
     filename: 'app.js'
   },
   // how modules should be transformed
   module: {
-    loaders: [
-        {test: /\.vue$/, loader: 'vue' },
-        {test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader')},
-        {test: /\.less$/, loader: ExtractTextPlugin.extract( "style-loader", 'css-loader?sourceMap!autoprefixer-loader!less-loader')},
-        {test: /\.js$/, loader: 'babel', exclude: /node_modules/ },
-        {test: /\.png$/, loader: 'url?limit=8192&mimetype=image/png'},
-        {test: /\.jpe?g$/, loader: 'url?limit=8192&mimetype=image/jpg'},
-        {test: /\.gif$/, loader: 'url?limit=8192&mimetype=image/gif'},
-        {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=8192&mimetype=image/svg+xml'},
-        {test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=8192&mimetype=application/font-woff2'},
-        {test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=8192&mimetype=application/font-woff'},
-        {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=8192&mimetype=application/octet-stream'},
-        {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file'}
-    ]
+    loaders: Loaders
+  },
+  // vue-loader configurations
+  vue: {
+    // configure autoprefixer
+    autoprefixer: {
+      browsers: ['last 2 versions']
+    },
+    loaders: {
+      css: ExtractTextPlugin.extract("css"),
+      // you can also include <style lang="less"> or other langauges
+      less: ExtractTextPlugin.extract("css!less")
+    }
   },
   // configure babel-loader.
   // this also applies to the JavaScript inside *.vue files

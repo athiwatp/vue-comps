@@ -2,7 +2,6 @@ var path = require('path');
 var webpack = require('webpack');
 
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
-var CopyWebpackPlugin = require('copy-webpack-plugin');
 var Loaders = require('./webpack.loaders.js');
 var Comps = require('./components.json');
 
