@@ -33,8 +33,6 @@ module.exports = {
       less: ExtractTextPlugin.extract("css!less")
     }
   },
-  // configure babel-loader.
-  // this also applies to the JavaScript inside *.vue files
   babel: {
     presets: ['es2015'],
     plugins: ['transform-runtime']
