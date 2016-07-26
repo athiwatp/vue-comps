@@ -1,4 +1,11 @@
 {
   "index": ["./components/index.js"],
-  "actionsheet": ["./components/actionsheet/index.js"]
+  "actionsheet": ["./components/actionsheet/index.js"],
+  "alert": ["./components/alert/index.js"],
+  "confirm": ["./components/confirm/index.js"],
+  "notify": ["./components/notify/index.js"],
+  "preloader": ["./components/preloader/index.js"],
+  "prompt": ["./components/prompt/index.js"],
+  "toast": ["./components/toast/index.js"],
+  "grid": ["./components/grid/index.js"]
 }
