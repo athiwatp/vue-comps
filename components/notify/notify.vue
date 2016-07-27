@@ -19,18 +19,9 @@
 </template>
 
 <style lang="less">
-    .notifications{
-        transition-property: transform;
-        transform: translate3d(0, -100%, 0);
-    }
-    .slideInDown-transition{
-        transition-duration: 400ms;
-        transform: translate3d(0, 0, 0);
-    }
-    .slideInDown-enter, .slideInDown-leave{
-        transition-duration: 400ms;
-        transform: translate3d(0, -100%, 0);
-    }
+    @import '../style/_mixins.less';
+    @import '../style/_var.less';
+    @import '../style/notify.less';
 </style>
 
 <script>

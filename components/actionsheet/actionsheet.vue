@@ -13,20 +13,7 @@
     <div v-if="show" class="modal-overlay" transition="opacity" @click="show=false"></div>
 </template>
 
-<style lang="less">
-    .actions-modal{
-        transition-property: transform;
-        transform: translate3d(0, 100%, 0);
-    }
-    .slideInUp-transition{
-        transition-duration: 400ms;
-        transform: translate3d(0, 0, 0);
-    }
-    .slideInUp-enter, .slideInUp-leave{
-        transition-duration: 400ms;
-        transform: translate3d(0, 100%, 0);
-    }
-</style>
+<style lang="less"></style>
 
 <script>
     export default {

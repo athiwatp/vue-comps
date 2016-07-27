@@ -2,7 +2,11 @@
     <div class="row"><slot></slot></div>
 </template>
 
-<style></style>
+<style lang="less">
+    @import '../style/_mixins.less';
+    @import '../style/_var.less';
+    @import '../style/grid.less';
+</style>
 
 <script>
     export default {}

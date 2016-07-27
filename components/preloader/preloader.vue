@@ -7,7 +7,9 @@
 </template>
 
 <style lang="less">
-    @import './preloader.less';
+    @import '../style/_mixins.less';
+    @import '../style/_var.less';
+    @import '../style/preloader.less';
 </style>
 
 <script>

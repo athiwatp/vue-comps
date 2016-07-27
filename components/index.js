@@ -1,3 +1,5 @@
+import './style/index.less'
+
 import alert from './alert/alert.vue'
 import confirm from './confirm/confirm.vue'
 import prompt from './prompt/prompt.vue'
