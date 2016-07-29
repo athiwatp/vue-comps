@@ -79,14 +79,20 @@
                     icon: 'icon-grid',
                     link: '/grid'
                 },{
+                    name: 'Infinite Scroll',
+                    icon: 'icon-wuxian'
+                },{
+                    name: 'Pull Down',
+                    icon: 'icon-pulldown'
+                },{
                     name: 'Panel',
                     icon: 'icon-panel'
                 },{
                     name: 'Vritual List',
                     icon: 'icon-list'
                 },{
-                    name: 'Pull Down',
-                    icon: 'icon-pulldown'
+                    name: 'Photo Browser',
+                    icon: 'icon-photo'
                 },{
                     name: 'Date',
                     icon: 'icon-date'

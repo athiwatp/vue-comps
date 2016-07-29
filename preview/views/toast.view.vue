@@ -16,7 +16,7 @@
             <div class="content-block">
                 <a class="button" href="javascript:;" v-on:click="open('default')">show default toast</a>
             </div>
-            <div class="content-block-title">icon toast (success, warn, error)</div>
+            <div class="content-block-title">icon toast (success, info, warn, error)</div>
             <div class="content-block">
                 <a class="button" href="javascript:;" v-on:click="open('icon')">show icon toast</a>
             </div>

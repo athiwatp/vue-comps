@@ -523,7 +523,7 @@ html.with-statusbar-overlay {
     position: absolute;
     left: 50%;
     top: 50%;
-    padding: 8px 12px;
+    padding: 10px 15px;
     max-width: 220px;
     line-height: 24px;
     text-align: center;
@@ -543,27 +543,35 @@ html.with-statusbar-overlay {
     }
     &.icon-toast {
         min-width: 80px;
+        padding: 8px 12px;
         i.icon{
             display: block;
         }
         &.success-toast{
             i.icon{
                 &:before{
-                    content: "\e609";
+                    content: "\e603";
                 }
             }
         }
         &.warn-toast{
             i.icon{
                 &:before{
-                    content: "\e60b";
+                    content: "\e602";
                 }
             }
         }
         &.error-toast{
             i.icon{
                 &:before{
-                    content: "\e60a";
+                    content: "\e600";
+                }
+            }
+        }
+        &.info-toast{
+            i.icon{
+                &:before{
+                    content: "\e601";
                 }
             }
         }
