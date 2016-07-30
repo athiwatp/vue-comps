@@ -39,7 +39,7 @@ body{
 .logo{
 	width: 200px;
 	height: 200px;
-	margin: 20px 0;
+	margin: 40px 0 20px 0;
 	font-size: 70px;
 	font-weight: 600;
 	color: #fff;
@@ -71,8 +71,8 @@ body{
 	color: #666;
 	font-size: 16px;
 	text-align: left;
-	line-height: 37px;
-  margin-bottom: 5px;
+	line-height: 28px;
+  margin-bottom: 15px;
 }
 
 .unkown{
@@ -80,6 +80,7 @@ body{
 	height: 172px;
 	text-align: left;
   line-height: 18px;
+  margin-top: 10px;
 }
 .unkown code{
   border-radius: 3px;
@@ -88,6 +89,8 @@ body{
   padding-left: 10px;
   background: #f5f5f5;
   color: #555;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 .hljs-string{
   color: #EE6E03;
