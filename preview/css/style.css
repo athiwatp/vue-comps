@@ -69,10 +69,10 @@ body{
 .summary{
 	width: 550px;
 	color: #666;
-	margin-bottom: 15px;
 	font-size: 16px;
 	text-align: left;
 	line-height: 37px;
+  margin-bottom: 5px;
 }
 
 .unkown{
@@ -82,11 +82,12 @@ body{
   line-height: 18px;
 }
 .unkown code{
-  border-radius: 2px;
+  border-radius: 3px;
   overflow: hidden;
   font-size: 14px;
   padding-left: 10px;
   background: #f5f5f5;
+  color: #555;
 }
 .hljs-string{
   color: #EE6E03;
@@ -103,7 +104,7 @@ body{
   position: relative;
   background: #fff;
   border-radius: 55px;
-  box-shadow: 0px 0px 0px 2px #aaa;
+  box-shadow: 0px 0px 0px 1px #aaa;
   width: 320px;
   height: 630px;
   padding: 1px 5px;
@@ -149,7 +150,7 @@ body{
   display: none;
 }
 
-iframe {
+iframe#phone-iframe {
   width: 375px;
   height: 606px;
   display: block;
