@@ -1,15 +1,43 @@
-<!doctype html>
+<!DOCTYPE HTML>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Vue Components</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div id="app">
-        <router-view></router-view>
-    </div>
-    <script src="app.js"></script>
-  </body>
+<head>
+	<meta charset="utf-8">
+	<title>Vue Comps v0.1.0</title>
+	<link href="//cdn.bootcss.com/highlight.js/9.5.0/styles/default.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+	<script src="//cdn.bootcss.com/highlight.js/9.5.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>  
+</head>
+<body>
+<div class="major">
+	<div class="inner">
+		<div class="left">
+			<div class="logo"><img src="./img/hugo.jpg" alt=""></div>
+			<div class="title">Vue Comps <span>v0.1.0</span></div>
+			<div class="summary">Mobile UI components for vue.js</div>
+			<div class="unkown">
+				<pre>
+					<code class="bash">
+##Installation
+npm install vue-comps --save
+
+##Usage
+import Vue from 'vue'
+import VueComps from 'vue-comps'
+Vue.use(VueComps)
+					</code>
+				</pre >
+			</div>
+		</div>
+		<div class="right">
+			<div class="phone">
+				<iframe src="http://localhost:8080/#!/app" frameborder="0" scrolling="no"></iframe>
+				<div class="statusbar"></div>
+        	</div>
+		</div>
+	</div>
+</div>
+<a href="https://github.com/Alex-fun/vue-comps" target="_blank" title="Fork me on GitHub" class="forkRibbon forkRibbonColor">Fork me on GitHub</a>
+</body>
 </html>

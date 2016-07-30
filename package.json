@@ -17,8 +17,9 @@
     "url": "git+https://github.com/Alex-fun/vue-comps.git"
   },
   "keywords": [
-    "component",
     "vue",
+    "comps",
+    "components",
     "webapp",
     "webpack",
     "workplusFE"

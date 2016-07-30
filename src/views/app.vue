@@ -1,6 +1,6 @@
 <template>
     <div class="content">
-        <div class="logo"></div>
+        <!--<div class="logo"></div>-->
         <h3>Vue Comps</h3>
         <div class="content-block-title center">welcome to vue components.</div>
         <ul class="list-view">
@@ -29,6 +29,10 @@
         margin: 20px 0;
         background: url("../assets/images/hugo.jpg") center center no-repeat;
         background-size: contain;
+    }
+    h3{
+        margin: 15px 0;
+        font-size: 18px;
     }
     h3, .center{
         text-align: center;

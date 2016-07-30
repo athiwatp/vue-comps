@@ -9,7 +9,7 @@ var Loaders = require('./webpack.loaders.js');
 module.exports = {
   // the main entry of our app
   entry: {
-      app: ['./preview/entry.js']
+      app: ['./src/entry.js']
   },
   // output configuration
   output: {
@@ -43,7 +43,7 @@ module.exports = {
       }),
       new webpack.optimize.OccurrenceOrderPlugin(),
       new CopyWebpackPlugin([
-          {from: './preview/index.html', to: './index.html'},
+          {from: './src/index.html', to: './index.html'},
       ])
   ]
 }
