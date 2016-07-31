@@ -1,13 +1,12 @@
 <template>
     <div class="content">
-        <!--<div class="logo"></div>-->
         <h3>Vue Comps</h3>
         <div class="content-block-title center">welcome to vue components.</div>
         <ul class="list-view">
             <li v-for="item in lists">
                 <a href="#{{item.link}}" class="item-link">
                     <div class="item-content">
-                        <div class="item-media">
+                        <div class="item-media" v-bind:class="{'off': !item.link}">
                             <i class="icon {{item.icon}}"></i>
                         </div>
                         <div class="item-inner">
@@ -23,13 +22,6 @@
 </template>
 
 <style lang="less">
-    .logo{
-        width: 100%;
-        height: 160px;
-        margin: 20px 0;
-        background: url("../assets/images/hugo.jpg") center center no-repeat;
-        background-size: contain;
-    }
     h3{
         margin: 15px 0;
         font-size: 18px;
@@ -43,6 +35,9 @@
         margin-top: 15px;
         text-transform: lowercase;
         color: #6d6d72;
+    }
+    .off .icon{
+        color: #666;
     }
 </style>
 
@@ -79,6 +74,10 @@
                     icon: 'icon-notify',
                     link: '/notify'
                 },{
+                    name: 'Popover',
+                    icon: 'icon-panel',
+                    link: '/popover'
+                },{
                     name: 'Grid',
                     icon: 'icon-grid',
                     link: '/grid'
@@ -88,9 +87,6 @@
                 },{
                     name: 'Pull Down',
                     icon: 'icon-pulldown'
-                },{
-                    name: 'Panel',
-                    icon: 'icon-panel'
                 },{
                     name: 'Vritual List',
                     icon: 'icon-list'

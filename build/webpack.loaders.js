@@ -1,5 +1,6 @@
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
+// loaders 
 module.exports = [
     {test: /\.vue$/, loader: 'vue' },
     {test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader')},

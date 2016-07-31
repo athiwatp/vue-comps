@@ -10,6 +10,7 @@
     @import '../style/_mixins.less';
     @import '../style/_var.less';
     @import '../style/preloader.less';
+    @import '../style/transition.less';
 </style>
 
 <script>

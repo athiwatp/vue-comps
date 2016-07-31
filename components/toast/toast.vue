@@ -7,7 +7,11 @@
 </template>
 
 <style lang="less">
-
+    @import '../style/_mixins.less';
+    @import '../style/_var.less';
+    @import '../style/icon.less';
+    @import '../style/toast.less';
+    @import '../style/transition.less';
 </style>
 
 <script>

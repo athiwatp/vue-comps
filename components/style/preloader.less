@@ -1,4 +1,38 @@
 /* === Preloader === */
+//Preloaders modals
+.modal .preloader {
+    width: 34px;
+    height: 34px;
+}
+.preloader-indicator-overlay {
+    visibility: visible;
+    opacity: 0;
+    background: none;
+}
+.preloader-indicator-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: 8px;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 13500;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    .preloader {
+        display: block;
+        width: 34px;
+        height: 34px;
+        &~span{
+            padding: 8px 4px 0 4px;
+        }
+    }
+}
+
 .encoded-svg-background(@svg) {
     @url: `encodeURIComponent(@{svg})`;
     background-image: url("data:image/svg+xml;charset=utf-8,@{url}");

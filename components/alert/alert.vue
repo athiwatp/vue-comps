@@ -11,7 +11,12 @@
 	<div v-show="show" class="modal-overlay" transition="opacity"></div>
 </template>
 
-<style lang="less"></style>
+<style lang="less">
+    @import '../style/_mixins.less';
+    @import '../style/_var.less';
+    @import '../style/modal.less';
+    @import '../style/transition.less';
+</style>
 
 <script>
 export default {

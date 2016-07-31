@@ -1,0 +1,77 @@
+/* === Toast === */
+.toast-overlay {
+    visibility: visible;
+    opacity: 0;
+    background: none;
+}
+.toast-modal {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: 12px 20px;
+    max-width: 220px;
+    line-height: 24px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 13500;
+    border-radius: 5px;
+    color: #fff;
+    transform: translate(-50%, -50%);
+    &.top-toast{
+        top: 80px;
+        transform: translate(-50%, 0);
+    }
+    &.bottom-toast{
+        top: auto;
+        bottom: 80px;
+        transform: translate(-50%, 0);
+    }
+    &.icon-toast {
+        min-width: 80px;
+        padding: 8px 12px;
+        i.icon{
+            display: block;
+        }
+        &.success-toast{
+            i.icon{
+                &:before{
+                    content: "\e603";
+                }
+            }
+        }
+        &.warn-toast{
+            i.icon{
+                &:before{
+                    content: "\e602";
+                }
+            }
+        }
+        &.error-toast{
+            i.icon{
+                &:before{
+                    content: "\e600";
+                }
+            }
+        }
+        &.info-toast{
+            i.icon{
+                &:before{
+                    content: "\e601";
+                }
+            }
+        }
+    }
+    i.icon{
+        flex: 1;
+        line-height: 60px;
+        padding-top: 5px;
+        font-size: 50px;
+        color: #fff;
+        display: none;
+    }
+    span{
+        flex: 1;
+    }
+}

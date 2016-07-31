@@ -1,0 +1,113 @@
+/* === Action Sheet === */
+@actionsModalBg: rgba(255,255,255,0.95);
+@actionsModalButtonActiveBg: rgba(230,230,230,0.9);
+@actionsModalHairlineColor: rgba(0,0,0,0.2);
+@actionsModalDuration: 300ms;
+
+.actions-modal {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 13500;
+    width: 100%;
+    .transform(translate3d(0,100%,0));
+    transition-property: transform;
+    @media (min-width:496px) {
+        width: 480px;
+        left: 50%;
+        margin-left: -240px;
+    }
+    &.modal-in {
+        .transition(@actionsModalDuration);
+        .transform(translate3d(0,0,0));
+    }
+    &.modal-out {
+        z-index: 13500-1;
+        .transition(@actionsModalDuration);
+        .transform(translate3d(0,100%,0));
+    }
+}
+.actions-modal-group {
+    margin: 8px;
+    position: relative;
+    border-radius: 13px;
+    overflow: hidden;
+    .transform(translate3d(0,0,0));
+}
+.actions-modal-button, .actions-modal-label {
+    width: 100%;
+    text-align: center;
+    font-weight: normal;
+    margin: 0;
+    background: @actionsModalBg;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    .hairline(bottom, @actionsModalHairlineColor);
+    a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+    }
+    b {
+        font-weight: 500;
+        html.ios-gt-8 & {
+            font-weight: 600;
+        }
+    }
+    &.actions-modal-button-bold {
+        font-weight: 500;
+        html.ios-gt-8 & {
+            font-weight: 600;
+        }
+    }
+    &.actions-modal-button-red {
+        color: @red;
+    }
+    &:first-child {
+        border-radius: 13px 13px 0 0;
+    }
+    &:last-child {
+        .hairline-remove(bottom);
+        border-radius: 0 0 13px 13px;
+    }
+    &:first-child:last-child {
+        border-radius: 13px;
+    }
+    &.disabled {
+        opacity: 0.9;
+        color:@gray;
+    }
+}
+.actions-modal-button {
+    cursor: pointer;
+    height: 57px;
+    line-height: 57px;
+    font-size: 20px;
+    color: @default-color;
+    white-space: normal;
+    text-overflow: ellipsis;
+    html:not(.watch-active-state) &:active, &.active-state {
+        background: @actionsModalButtonActiveBg;
+    }
+}
+.actions-modal-label {
+    font-size: 13px;
+    line-height: 1.3;
+    min-height: 57px;
+    padding: 8px 10px;
+    color: #8a8a8a;
+    .flexbox();
+    .justify-content(center);
+    .align-items(center);
+}
+@media (orientation:landscape) {
+    .actions-modal-label {
+        min-height: 44px;
+    }
+    .actions-modal-button {
+        height: 44px;
+        line-height: 44px;
+    }
+}

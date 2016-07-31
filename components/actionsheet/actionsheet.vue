@@ -13,7 +13,12 @@
     <div v-if="show" class="modal-overlay" transition="opacity" @click="show=false"></div>
 </template>
 
-<style lang="less"></style>
+<style lang="less">
+    @import '../style/_mixins.less';
+    @import '../style/_var.less';
+    @import '../style/actionsheet.less';
+    @import '../style/transition.less';
+</style>
 
 <script>
     export default {
