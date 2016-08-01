@@ -16,11 +16,11 @@ import toastModule from './views/toast.view.vue'
 import notifyModule from './views/notify.view.vue'
 import gridModule from './views/grid.view.vue'
 import popoverModule from './views/popover.view.vue'
+import modalModule from './views/modal.view.vue'
 
 Vue.use(VueResource)
 Vue.use(VueRouter)
 Vue.use(VueComps)
-
 
 var App = Vue.extend({});
 
@@ -56,6 +56,9 @@ router.map({
     },
     '/popover': {
         component: popoverModule
+    },
+    '/modal': {
+        component: modalModule
     }
 })
 
