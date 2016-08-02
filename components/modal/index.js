@@ -4,12 +4,7 @@
 var modalModule = {};
 
 var _modalTemplateTempDiv = document.createElement('div');
-modalModule.modalStack = [];
-modalModule.modalStackClearQueue = function () {
-    if (modalModule.modalStack.length) {
-        (modalModule.modalStack.shift())();
-    }
-};
+
 modalModule.modal = function (params) {
     params = params || {};
     var modalHTML = '', buttonsHTML = '';
@@ -27,21 +22,19 @@ modalModule.modal = function (params) {
     modalHTML = '<div class="modal ' + noButtons + ' ' + (params.cssClass || '') + '"><div class="modal-inner">' + (titleHTML + textHTML + afterTextHTML) + '</div>' + modalButtonsHTML + '</div>';
 
     _modalTemplateTempDiv.innerHTML = modalHTML;
-
-    var modal = $(_modalTemplateTempDiv).children();
-
-    $('body').append(modal[0]);
+    document.body.appendChild(_modalTemplateTempDiv.firstChild);
 
     // Add events on buttons
-    modal.find('.modal-button').each(function (index, el) {
-        $(el).on('click', function (e) {
-            if (params.buttons[index].close !== false) modalModule.closeModal(modal);
-            if (params.buttons[index].onClick) params.buttons[index].onClick(modal, e);
-            if (params.onClick) params.onClick(modal, index);
-        });
-    });
-    modalModule.openModal(modal);
-    return modal[0];
+    var btns = document.body.querySelectorAll('.modal-button');
+    for (var i = 0; i < btns.length; i++) {
+        (function(index){
+            btns[index].addEventListener('click', function (e) {
+                if (params.buttons[index].close !== false) modalModule.closeModal();
+                if (params.buttons[index].onClick) params.buttons[index].onClick();
+            })
+        })(i)
+    }
+    modalModule.openModal();
 };
 modalModule.alert = function (text, title, callbackOk) {
     if (typeof title === 'function') {
@@ -54,64 +47,37 @@ modalModule.alert = function (text, title, callbackOk) {
         buttons: [ {text: '确定', bold: true, onClick: callbackOk} ]
     });
 };
-modalModule.openModal = function (modal) {
-    modal = $(modal);
-    var isModal = modal.hasClass('modal');
-    if ($('.modal.modal-in:not(.modal-out)').length && modalModule.params.modalStack && isModal) {
-        modalModule.modalStack.push(function () {
-            modalModule.openModal(modal);
-        });
-        return;
+modalModule.openModal = function () {
+    var modal = document.querySelector('.modal');
+    var _className = modal.className,
+        isModal = false;
+    if (_className.indexOf('modal') > -1) {
+        isModal = true;
     }
-    // do nothing if this modal already shown
-    if (true === modal.data('f7-modal-shown')) {
-        return;
-    }
-    modal.data('f7-modal-shown', true);
-    modal.once('close', function() {
-       modal.removeData('f7-modal-shown');
-    });
     
     if (isModal) {
-        modal.show();
-        modal.css({
-            marginTop: - Math.round(modal.outerHeight() / 2) + 'px'
-        });
+        modal.style.display = 'block';
+        modal.style.marginTop = - Math.round(modal.offsetWidth / 2) + 'px';
     }
 
-    // 需要手动加入
-    var overlay;
-    if ($('.modal-overlay').length === 0) {
-        $('body').append('<div class="modal-overlay"></div>');
+    var overlay = document.createElement('div');
+        overlay.className = 'modal-overlay modal-overlay-visible';
+    if (document.getElementsByClassName('modal-overlay').length === 0) {
+        document.body.appendChild(overlay);
     }
-    
-    //Make sure that styles are applied, trigger relayout;
-    var clientLeft = modal[0].clientLeft;
 
-    // Trugger open event
-    modal.trigger('open');
-
-    // 要替换jq的操作
-    modal.removeClass('modal-out').addClass('modal-in').transitionEnd(function (e) {
-        if (modal.hasClass('modal-out')) modal.trigger('closed');
-        else modal.trigger('opened');
-    });
-    return true;
+    modal.className = _className.replace('modal-out', '') + 'modal-in';
 };
-modalModule.closeModal = function (modal) {
-    modal = $(modal || '.modal-in');
+modalModule.closeModal = function () {
+    var modal = document.querySelector('.modal'),
+        _className = modal.className;
     if (typeof modal !== 'undefined' && modal.length === 0) {
         return;
     }
-    var overlay;
+    var overlay = document.querySelector('.modal-overlay');
     
-    modal.trigger('close');
-    
-    modal.removeClass('modal-in modal-out').trigger('closed').hide();
-    if (removeOnClose) {
-        modal.remove();
-    }
-    return true;
+    overlay.className = 'modal-overlay';
+    modal.className = _className.replace('modal-out', '').replace('modal-in', '');
 };
 
 

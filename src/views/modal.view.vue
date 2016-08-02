@@ -36,7 +36,9 @@
         },
         methods: {
             openAlert(){
-                Modal.alert('hahah');
+                Modal.alert('modal alert', function(){
+                    console.log('hahah');
+                });
             }
         }
     }
