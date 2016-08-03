@@ -33,6 +33,7 @@ modalModule.modal = function (params) {
             btns[index].addEventListener('click', function (e) {
                 if (params.buttons[index].close !== false) modalModule.closeModal();
                 if (params.buttons[index].onClick) params.buttons[index].onClick();
+                if (params.onClick) params.onClick(index);
             })
         })(i)
     }
@@ -49,6 +50,50 @@ modalModule.alert = function (text, title, callbackOk) {
         buttons: [ {text: '确定', bold: true, onClick: callbackOk} ]
     });
 };
+
+modalModule.confirm = function (text, title, callbackOk, callbackCancel) {
+    if (typeof title === 'function') {
+        callbackCancel = arguments[2];
+        callbackOk = arguments[1];
+        title = undefined;
+    }
+    return modalModule.modal({
+        text: text || '',
+        title: typeof title === 'undefined' ? '提示' : title,
+        buttons: [
+            {text: '取消', onClick: callbackCancel},
+            {text: '确定', bold: true, onClick: callbackOk}
+        ]
+    });
+};
+
+modalModule.prompt = function (text, title, callbackOk, callbackCancel) {
+    if (typeof title === 'function') {
+        callbackCancel = arguments[2];
+        callbackOk = arguments[1];
+        title = undefined;
+    }
+    return modalModule.modal({
+        text: text || '',
+        title: typeof title === 'undefined' ? '提示' : title,
+        afterText: '<div class="input-field"><input type="text" class="modal-text-input"></div>',
+        buttons: [
+            {
+                text: '取消'
+            },
+            {
+                text: '确定',
+                bold: true
+            }
+        ],
+        onClick: function (index) {
+            var modal = document.querySelector('.modal-m');
+            if (index === 0 && callbackCancel) callbackCancel(modal.querySelector('.modal-text-input').value);
+            if (index === 1 && callbackOk) callbackOk(modal.querySelector('.modal-text-input').value);
+        }
+    });
+};
+
 modalModule.openModal = function () {
     var modal = document.querySelector('.modal-m');
     var _className = modal.className,
@@ -59,7 +104,7 @@ modalModule.openModal = function () {
     
     if (isModal) {
         modal.style.display = 'block';
-        modal.style.marginTop = - Math.round(modal.offsetWidth / 2) + 'px';
+        modal.style.marginTop = - Math.round(modal.offsetHeight / 2) + 'px';
     }
 
     var overlay = document.createElement('div');
@@ -79,13 +124,14 @@ modalModule.closeModal = function () {
         return;
     }
     var overlay = document.querySelector('.modal-m-overlay');
-    
-    modal.className = _className.replace('modal-m-out', '').replace('modal-m-in', '');
-    modal.addEventListener('webkitTransitionEnd, transitionend', function () {
-        console.log('webkitTransitionEnd');
-        modal.parentNode.removeChild(modal);
+    modal.addEventListener('webkitTransitionEnd', function (e) {
+        if (e.propertyName === 'transform') {
+             console.log('webkitTransitionEnd');
+            modal.parentNode.removeChild(modal);
+        }
     }, false);
-
+    
+    modal.className = _className.replace('modal-m-in', '') + 'modal-m-out';
     overlay.className = 'modal-m-overlay';
 };
 

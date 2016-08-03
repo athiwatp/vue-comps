@@ -17,10 +17,10 @@
                 <a class="button" href="javascript:;" v-on:click="openAlert()">alert</a>
             </div>
             <div class="content-block">
-                <a class="button" href="javascript:;" v-on:click="open()">confirm</a>
+                <a class="button" href="javascript:;" v-on:click="openConfirm()">confirm</a>
             </div>
             <div class="content-block">
-                <a class="button" href="javascript:;" v-on:click="open()">pompt</a>
+                <a class="button" href="javascript:;" v-on:click="openPormpt()">pompt</a>
             </div>
         </div>
     </div>
@@ -37,7 +37,21 @@
         methods: {
             openAlert(){
                 Modal.alert('modal alert', function(){
-                    console.log('hahah');
+                    console.log('alert');
+                });
+            },
+            openConfirm(){
+                Modal.confirm('modal confirm', function(){
+                    console.log('confirm ok!');
+                },function(){
+                    console.log('confirm cancel!');
+                });
+            },
+            openPormpt(){
+                Modal.prompt('modal prompt', function(val){
+                    console.log('prompt ok:' + val);
+                },function(){
+                    console.log('prompt cancel!');
                 });
             }
         }
