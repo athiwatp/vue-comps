@@ -21,6 +21,12 @@ module.exports = {
         new ExtractTextPlugin("[name]/index.css", {
             allChunks: true
         }),
-        new webpack.optimize.OccurrenceOrderPlugin()
+        new webpack.optimize.OccurrenceOrderPlugin(),
+        new webpack.optimize.DedupePlugin(),
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false
+            }
+        })
     ]
 };
