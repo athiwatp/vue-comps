@@ -58,10 +58,6 @@
                     icon: 'icon-prompt',
                     link: '/prompt'
                 },{
-                    name: 'Modal',
-                    icon: 'icon-message',
-                    link: '/modal'
-                },{
                     name: 'Action Sheet',
                     icon: 'icon-actionsheet',
                     link: '/actionsheet'
@@ -71,8 +67,12 @@
                     link: '/preloader'
                 },{
                     name: 'Toast',
-                    icon: 'icon-message',
+                    icon: 'icon-toast',
                     link: '/toast'
+                },{
+                    name: 'Modal',
+                    icon: 'icon-message',
+                    link: '/modal'
                 },{
                     name: 'Notify',
                     icon: 'icon-notify',
