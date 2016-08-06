@@ -6,6 +6,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 let Loaders = require('./webpack.loaders.js');
 
 module.exports = {
+    devtool: '#source-map',
     module: {
         loaders: Loaders
     },

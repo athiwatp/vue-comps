@@ -3,9 +3,11 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const Comps = require('./components.json');
-let config = require('./webpack.config.js');
+let base = require('./webpack.base.js');
 
-module.exports = {
+delete base.devtool;
+
+module.exports = Object.assign({}, base, {
   // the entry of every components
   entry: Comps,
   // output configuration
@@ -13,10 +15,6 @@ module.exports = {
     path: path.resolve(__dirname, '../dist'),
     filename: "[name]/index.js",
   },
-  module: config.module,
-  resolve: config.resolve,
-  vue: config.vue,
-  babel: config.babel,
   plugins: [
         new ExtractTextPlugin("[name]/index.css", {
             allChunks: true
@@ -29,4 +27,4 @@ module.exports = {
             }
         })
     ]
-};
+});
