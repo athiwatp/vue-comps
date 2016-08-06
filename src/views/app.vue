@@ -67,7 +67,7 @@
                     link: '/preloader'
                 },{
                     name: 'Toast',
-                    icon: 'icon-toast',
+                    icon: 'icon-toast-1',
                     link: '/toast'
                 },{
                     name: 'Modal',
