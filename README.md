@@ -3,7 +3,7 @@
     <img src="https://hejx.herokuapp.com/preview/img/hugo.jpg" width="140">
   </a>
 </p>
-<p align="center">Vue Comps(in devlement)</p>
+<p align="center">Vue Comps v0.1.0 `in devlement`</p>
 <p align="center">Mobile UI elements for vue.js. Based on Framework7 UI.</p>
 
 ### Installation
