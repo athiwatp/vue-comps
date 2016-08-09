@@ -14,7 +14,12 @@
         <div class="content">
             <div class="content-block-title">Switch component</div>
             <div class="content-block">
-                <switch></switch>
+                <switch :checked.sync="show"></switch>
+                <p>Switch status: {{show}}</p>
+            </div>
+            <div class="content-block">
+                <switch :checked.sync="true" :disabled="true"></switch>
+                <p>disabled: true</p>
             </div>
         </div>
     </div>
@@ -26,19 +31,7 @@
     export default {
         data(){
             return {
-                show: {
-                    default: false,
-                    icon: false,
-                    postion: false
-                }
-            }
-        },
-        methods: {
-            open(type){
-                this.show[type] = true;
-                setTimeout(()=>{
-                    this.show[type] = false;
-                }, 2000);
+                show: false
             }
         }
     }

@@ -1,6 +1,6 @@
 <template>
     <label class="label-switch">
-        <input type="checkbox">
+        <input type="checkbox" v-model="checked" :disabled="disabled">
         <div class="checkbox"></div>
     </label>
 </template>
@@ -13,6 +13,16 @@
 
 <script>
     export default {
-
+        props: {
+            checked: {
+                type: Boolean,
+                defalut: false,
+                twoWay: true
+            },
+            disabled: {
+                type: Boolean,
+                defalut: false
+            }
+        }
     } 
 </script>
