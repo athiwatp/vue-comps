@@ -113,8 +113,9 @@
                         icon: 'icon-grid',
                         link: '/grid'
                     },{
-                        name: 'Checkbox',
-                        icon: 'icon-checkbox'
+                        name: 'Label Switch',
+                        icon: 'icon-checkbox',
+                        link: '/switch'
                     },{
                         name: 'Radio',
                         icon: 'icon-radio'

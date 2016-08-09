@@ -9,6 +9,7 @@ import toast from './toast/toast.vue'
 import notify from './notify/notify.vue'
 import grid from './grid/grid.vue'
 import item from './grid/grid.item.vue'
+import labelSwitch from './switch/switch.vue'
 
 export default {
     install(Vue){
@@ -21,5 +22,6 @@ export default {
         Vue.component('notify', notify);
         Vue.component('grid', grid);
         Vue.component('item', item);
+        Vue.component('switch', labelSwitch);
     }
 }

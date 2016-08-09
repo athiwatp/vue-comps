@@ -17,6 +17,7 @@ import notifyModule from './views/notify.view.vue'
 import gridModule from './views/grid.view.vue'
 import popoverModule from './views/popover.view.vue'
 import modalModule from './views/modal.view.vue'
+import switchModule from './views/switch.view.vue'
 
 Vue.use(VueResource)
 Vue.use(VueRouter)
@@ -59,6 +60,9 @@ router.map({
     },
     '/modal': {
         component: modalModule
+    },
+    'switch': {
+        component: switchModule
     }
 })
 

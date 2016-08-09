@@ -13,7 +13,7 @@
         </header>
         <div class="content">
             <div class="content-block">
-                <p>Vue-comps comes with flexible layout grid:</p>
+                <p class="desc">Vue-comps comes with flexible layout grid:</p>
             </div>
             <div class="content-block-title">Grid component</div>
             <div class="content-block">
@@ -49,11 +49,15 @@
 </template>
 
 <style lang="less">
+    .content-block .desc{
+        padding: 0;
+    }
     .row.demo{
         text-align: center;
         line-height: 30px;
         > [class*="col-"]{
             border: 1px solid #ddd;
+            background: #fff;
         }
     }
 </style>
