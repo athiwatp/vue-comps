@@ -7,7 +7,7 @@
                     <a href="#{{item.link}}" class="item-link">
                         <div class="item-content">
                             <div class="item-media" v-bind:class="{'off': !item.link}">
-                                <i class="icon {{item.icon}}"></i>
+                                <i class="icon big-icon {{item.icon}}"></i>
                             </div>
                             <div class="item-inner">
                                 <div class="item-title">
@@ -39,6 +39,10 @@
     }
     .off .icon{
         color: #666;
+    }
+    .list-view li .item-media .big-icon{
+        width: 29px;
+        height: 29px;
     }
 </style>
 
@@ -117,8 +121,9 @@
                         icon: 'icon-checkbox',
                         link: '/switch'
                     },{
-                        name: 'Radio',
-                        icon: 'icon-radio'
+                        name: 'Checkboxes And Radios',
+                        icon: 'icon-radio',
+                        link: '/select'
                     }]
                 }]
             }

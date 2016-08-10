@@ -58,7 +58,7 @@
         display: none;
         &:checked {
             &+ .checkbox {
-                background: #4cd964;
+                background: @default-color;
                 &:before {
                     .transform(scale(0));
                 }
@@ -69,7 +69,7 @@
         }
         &:disabled{
             &+ .checkbox {
-                background: #ddd;
+                background: @gray;
             }
         }
     }

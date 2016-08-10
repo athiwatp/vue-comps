@@ -10,6 +10,8 @@ import notify from './notify/notify.vue'
 import grid from './grid/grid.vue'
 import item from './grid/grid.item.vue'
 import labelSwitch from './switch/switch.vue'
+import checkbox from './checkbox/checkbox.vue'
+import radio from './radio/radio.vue'
 
 export default {
     install(Vue){
@@ -23,5 +25,7 @@ export default {
         Vue.component('grid', grid);
         Vue.component('item', item);
         Vue.component('switch', labelSwitch);
+        Vue.component('checkbox', checkbox);
+        Vue.component('radio', radio);
     }
 }
