@@ -7,5 +7,9 @@
   "prompt": ["./components/prompt/index.js"],
   "toast": ["./components/toast/index.js"],
   "grid": ["./components/grid/index.js"],
+  "modal": ["./components/modal/index.js"],
+  "radio": ["./components/radio/index.js"],
+  "checkbox": ["./components/checkbox/index.js"],
+  "switch": ["./components/switch/index.js"],
   "index": ["./components/index.js"]  
 }
