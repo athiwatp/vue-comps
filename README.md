@@ -46,7 +46,6 @@ npm run dev // devlement
 * date picker
 * slider
 * photo browser
-* radio
 * list
 * page
 * ...
