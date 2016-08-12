@@ -7,10 +7,10 @@
     "dist"
   ],
   "scripts": {
-    "dev": "webpack-dev-server --config build/webpack.dev.js --inline --hot",
-    "build": "webpack -p --config build/webpack.build.js --color",
+    "dev": "webpack-dev-server --config build/webpack.dev.js --inline --hot --colors",
+    "build": "webpack -p --config build/webpack.build.js --colors",
     "prepublish": "rm -rf dist && npm run build && mv dist/index/index.js dist/vue-comps.js && mv dist/index/index.css dist/vue-comps.css && rm -rf dist/index",
-    "preview": "NODE_ENV=production webpack -p --config build/webpack.dev.js --color"    
+    "preview": "NODE_ENV=production webpack -p --config build/webpack.dev.js --colors"    
   },
   "repository": {
     "type": "git",
